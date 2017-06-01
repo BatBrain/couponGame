@@ -21,9 +21,10 @@ include('https://code.jquery.com/jquery-3.2.1.min.js', function() {
     $(document).ready(function() {
       include('https://cdn.rawgit.com/noelboss/featherlight/1.7.6/release/featherlight.min.js', function() {
         $(document).ready(function() {
-          $('.briefcase').on('click', function() {
-            $(this).removeClass('infinite').addClass('hinge');
-            $('.briefcase').off();
+          $('.covering-image').on('click', function() {
+            $(this).children().removeClass('infinite').addClass('hinge');
+            $('.covering-image').off();
+            $(this).parent().append(coupon())
           })
         });
       });
@@ -32,19 +33,19 @@ include('https://code.jquery.com/jquery-3.2.1.min.js', function() {
 
 function coupon() {
   var winval = Math.floor(Math.random() * (10 - 1)) + 1
-  console.log(testValues[winval])
+  return "<div class='prize-text'> " + testValues[winval] + "</div>"
 }
 
 
 var testValues = {
-  1: 'winrar 10%',
-  2: 'winrar 20%',
-  3: 'winrar 30%',
-  4: 'winrar 40%',
-  5: 'winrar 50%',
-  6: 'winrar 60%',
-  7: 'winrar 70%',
-  8: 'winrar 80%',
-  9: 'winrar 90%',
-  10: 'winrar 100%'
+  1: '10%',
+  2: '20%',
+  3: '30%',
+  4: '40%',
+  5: '50%',
+  6: '60%',
+  7: '70%',
+  8: '80%',
+  9: '90%',
+  10: '100%'
 }
