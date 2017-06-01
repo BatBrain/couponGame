@@ -1,0 +1,35 @@
+body {
+  margin: 0px;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+
+}
+
+.container {
+
+}
+
+.coupon-container {
+  height: 600px;
+  width: 1000px;
+}
+
+.coupon-header {
+  height: 20%;
+}
+
+.coupon-play-area {
+  height: 70%;
+  background-color: #e3e3e3;
+}
+
+.coupon-footer {
+  height: 10%;
+
+}
+
+.briefcase {
+  width: 22%;
+  padding: 4%;
+}
