@@ -2,6 +2,14 @@ const webpack = require('webpack'),
     path = require('path'),
     fs = require('fs')
 
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const extractSass = new ExtractTextPlugin({
+    filename: "styles.css",
+    //disable: process.env.NODE_ENV === "development"
+});
+
+
 const SRC = path.resolve(__dirname, "src"),
     NODE_MODULES = path.resolve(__dirname, "node_modules")
 
@@ -10,10 +18,12 @@ const babelSettings = JSON.parse(fs.readFileSync(".babelrc"))
 
 const config = {
     entry: [
-        './src/index.js'
+        './src/index.js',
+        './src/index.scss'
     ],
+    devtool: "source-map", // any "source-map"-like devtool is possible
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.jsx?$/,
                 include: SRC,
@@ -28,18 +38,23 @@ const config = {
                 loader: "url-loader"
             },
             {
+                test: /\.scss$/,
+                use: extractSass.extract({
+                    use: [{
+                        loader: "css-loader"
+                      },
+                    {
+                        loader: "sass-loader"
+                    }],
+                    // use style-loader in development
+                    fallback: "style-loader"
+                  })
+                },
+            {
                 test: /\.svg$/,
                 loader: 'svg-inline-loader'
-            },
-            {
-                test: /\.css$/,
-                include: [
-                    NODE_MODULES,
-                    SRC
-                ],
-                loader: 'style-loader!css-loader!postcss-loader',
             }
-        ]
+          ]
     },
     resolve: {
           modules: [
@@ -57,6 +72,7 @@ const config = {
         filename: 'bundle.js'
     },
     plugins: [
+        extractSass,
         new webpack.DefinePlugin({
             'process.env': {
                 'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
