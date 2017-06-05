@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "link": "(cd .. && npm link .) && npm link npm-install-webpack-plugin",
     "postinstall": "npm run link",
-    "start": "webpack --config webpack.config.js --watch"
+    "start": "webpack --config webpack.config.js --watch",
+    "publish": "webpack --optimize-minimize --define process.env.NODE_ENV='production'"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "npm-install-webpack-plugin": "^4.0.4"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-plugin-syntax-async-functions": "^6.13.0",
