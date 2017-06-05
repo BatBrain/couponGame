@@ -4,7 +4,10 @@
   "description": "Gamified coupon codes Wordpress plugin for woocommerce",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "link": "(cd .. && npm link .) && npm link npm-install-webpack-plugin",
+    "postinstall": "npm run link",
+    "start": "webpack --config webpack.config.js --watch"
   },
   "repository": {
     "type": "git",
@@ -22,5 +25,26 @@
   "bugs": {
     "url": "https://github.com/BatBrain/couponGame/issues"
   },
-  "homepage": "https://github.com/BatBrain/couponGame#readme"
+  "homepage": "https://github.com/BatBrain/couponGame#readme",
+  "devDependencies": {
+    "npm-install-webpack-plugin": "^4.0.4"
+  },
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-regenerator": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "file-loader": "^0.11.2",
+    "jquery": "^3.2.1",
+    "postcss-loader": "^2.0.5",
+    "style-loader": "^0.18.2",
+    "svg-inline-loader": "^0.7.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.6.1"
+  }
 }
