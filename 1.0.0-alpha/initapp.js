@@ -24,8 +24,8 @@ include('https://code.jquery.com/jquery-3.2.1.min.js', function() {
           $('.covering-image').on('click', function() {
             $(this).children().removeClass('infinite').addClass('hinge');
             $('.covering-image').off();
-            $(this).parent().append(coupon())
-          })
+            $(this).parent().append(coupon());
+          });
         });
       });
     });
@@ -33,8 +33,8 @@ include('https://code.jquery.com/jquery-3.2.1.min.js', function() {
 
 function coupon() {
   var winval = Math.floor(Math.random() * (10 - 1)) + 1
-  return "<div class='prize-text'> " + testValues[winval] + "</div>"
-}
+  return "<div class='prize-text' style='animated fadeIn'> " + testValues[winval] + "</div>"
+};
 
 
 var testValues = {
@@ -48,4 +48,4 @@ var testValues = {
   8: '80%',
   9: '90%',
   10: '100%'
-}
+};

@@ -1,0 +1,26 @@
+{
+  "name": "coupon-game",
+  "version": "1.0.0",
+  "description": "Gamified coupon codes Wordpress plugin for woocommerce",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BatBrain/couponGame.git"
+  },
+  "keywords": [
+    "woocommerce",
+    "batbrain",
+    "wordpress",
+    "coupon",
+    "plugin"
+  ],
+  "author": "Sol (John)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BatBrain/couponGame/issues"
+  },
+  "homepage": "https://github.com/BatBrain/couponGame#readme"
+}
