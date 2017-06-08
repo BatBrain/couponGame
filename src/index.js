@@ -4,6 +4,14 @@ var coupon = require('./app.js');
 
 $(document).ready(function() {
 
+  //email validation
+  function validateEmail(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+  }
+
+
+
   $('.covering-image').on('click', function() {
 
     $(this).children().removeClass('infinite').addClass('hinge');
