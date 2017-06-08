@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9753297c8b153ac034bf"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "727ee84751c32bb4b080"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -706,7 +706,7 @@
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(5)(__webpack_require__.s = 5);
+/******/ 	return hotCreateRequire(4)(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -722,13 +722,11 @@
 "use strict";
 
 
-var $ = __webpack_require__(4);
+var $ = __webpack_require__(3);
 __webpack_require__(0);
 var coupon = __webpack_require__(2);
-var htmlInsert = __webpack_require__(3);
 
 $(document).ready(function () {
-  $('#page-container').append('<div class="wrapper">\n      <div class="box a">\n        <div class="prize-value">\n          <div class="covering-image">\n            <img class="briefcase animated bounce infinite" src="' + php_vars.home + '/briefcase.svg" />\n          </div>\n        </div>\n      </div>\n\n      <div class="box b">\n        <div class="prize-value">\n          <div class="covering-image">\n            <img class="briefcase animated bounce infinite" src="' + php_vars.home + '/briefcase.svg" />\n          </div>\n        </div>\n      </div>\n\n      <div class="box c">\n        <div class="prize-value">\n          <div class="covering-image">\n            <img class="briefcase animated bounce infinite" src="' + php_vars.home + '/briefcase.svg" />\n          </div>\n        </div>\n      </div>\n\n      <div class="box d">\n        <div class="prize-value">\n          <div class="covering-image">\n            <img class="briefcase animated bounce infinite" src="' + php_vars.home + '/briefcase.svg" />\n          </div>\n        </div>\n      </div>\n\n      <div class="box e">\n        <div class="prize-value">\n          <div class="covering-image">\n            <img class="briefcase animated bounce infinite" src="' + php_vars.home + '/briefcase.svg" />\n          </div>\n        </div>\n      </div>\n\n      <div class="box f">\n        <div class="prize-value">\n          <div class="covering-image">\n            <img class="briefcase animated bounce infinite" src="' + php_vars.home + '/briefcase.svg" />\n          </div>\n        </div>\n      </div>\n\n    </div>');
 
   $('.covering-image').on('click', function () {
 
@@ -775,17 +773,6 @@ module.exports = coupon;
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var container = "<div class=\"wrapper\">\n    <div class=\"box a\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"" + php_vars.home + "/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"box b\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"src/img/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"box c\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"src/img/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"box d\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"src/img/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"box e\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"src/img/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"box f\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"src/img/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n  </div>";
-
-module.exports = container;
-
-/***/ }),
-/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11045,7 +11032,7 @@ return jQuery;
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);
