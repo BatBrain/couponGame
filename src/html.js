@@ -2,7 +2,7 @@ var container = `<div class="wrapper">
     <div class="box a">
       <div class="prize-value">
         <div class="covering-image">
-          <img class="briefcase animated bounce infinite" src="src/img/briefcase.svg" />
+          <img class="briefcase animated bounce infinite" src="${php_vars.home}/briefcase.svg" />
         </div>
       </div>
     </div>
@@ -46,7 +46,6 @@ var container = `<div class="wrapper">
         </div>
       </div>
     </div>
-
   </div>`
 
 module.exports = container;

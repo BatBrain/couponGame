@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e2b37d57216d6ffabf64"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9753297c8b153ac034bf"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -728,7 +728,7 @@ var coupon = __webpack_require__(2);
 var htmlInsert = __webpack_require__(3);
 
 $(document).ready(function () {
-  $('body').append(htmlInsert);
+  $('#page-container').append('<div class="wrapper">\n      <div class="box a">\n        <div class="prize-value">\n          <div class="covering-image">\n            <img class="briefcase animated bounce infinite" src="' + php_vars.home + '/briefcase.svg" />\n          </div>\n        </div>\n      </div>\n\n      <div class="box b">\n        <div class="prize-value">\n          <div class="covering-image">\n            <img class="briefcase animated bounce infinite" src="' + php_vars.home + '/briefcase.svg" />\n          </div>\n        </div>\n      </div>\n\n      <div class="box c">\n        <div class="prize-value">\n          <div class="covering-image">\n            <img class="briefcase animated bounce infinite" src="' + php_vars.home + '/briefcase.svg" />\n          </div>\n        </div>\n      </div>\n\n      <div class="box d">\n        <div class="prize-value">\n          <div class="covering-image">\n            <img class="briefcase animated bounce infinite" src="' + php_vars.home + '/briefcase.svg" />\n          </div>\n        </div>\n      </div>\n\n      <div class="box e">\n        <div class="prize-value">\n          <div class="covering-image">\n            <img class="briefcase animated bounce infinite" src="' + php_vars.home + '/briefcase.svg" />\n          </div>\n        </div>\n      </div>\n\n      <div class="box f">\n        <div class="prize-value">\n          <div class="covering-image">\n            <img class="briefcase animated bounce infinite" src="' + php_vars.home + '/briefcase.svg" />\n          </div>\n        </div>\n      </div>\n\n    </div>');
 
   $('.covering-image').on('click', function () {
 
@@ -780,7 +780,7 @@ module.exports = coupon;
 "use strict";
 
 
-var container = "<div class=\"wrapper\">\n    <div class=\"box a\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"src/img/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"box b\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"src/img/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"box c\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"src/img/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"box d\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"src/img/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"box e\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"src/img/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"box f\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"src/img/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n\n  </div>";
+var container = "<div class=\"wrapper\">\n    <div class=\"box a\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"" + php_vars.home + "/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"box b\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"src/img/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"box c\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"src/img/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"box d\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"src/img/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"box e\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"src/img/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n\n    <div class=\"box f\">\n      <div class=\"prize-value\">\n        <div class=\"covering-image\">\n          <img class=\"briefcase animated bounce infinite\" src=\"src/img/briefcase.svg\" />\n        </div>\n      </div>\n    </div>\n  </div>";
 
 module.exports = container;
 
