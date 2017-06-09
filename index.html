@@ -11,141 +11,65 @@
 
 <body>
   <div class="wrapper">
-    <div class="box a">
-      <div class="prize-value">
-        <div class="covering-image">
-          <img class="shadow briefcase animated bounce infinite" src="src/img/briefcase.svg" />
+    <div class="inner-wrapper">
+      <div class="game-area">
+        <div class="grid">
+
+          <div class="box a">
+            <div class="prize-value">
+              <div class="covering-image">
+                <!-- <img class="shadow briefcase animated bounce infinite" src="src/img/briefcase.svg" /> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="box b">
+            <div class="prize-value">
+              <div class="covering-image">
+                <img class="shadow briefcase animated bounce infinite" src="src/img/briefcase.svg" />
+              </div>
+            </div>
+          </div>
+
+          <div class="box c">
+            <div class="prize-value">
+              <div class="covering-image">
+                <img class="shadow briefcase animated bounce infinite" src="src/img/briefcase.svg" />
+              </div>
+            </div>
+          </div>
+
+          <div class="box d">
+            <div class="prize-value">
+              <div class="covering-image">
+                <img class="shadow briefcase animated bounce infinite" src="src/img/briefcase.svg" />
+              </div>
+            </div>
+          </div>
+
+          <div class="box e">
+            <div class="prize-value">
+              <div class="covering-image">
+                <img class="shadow briefcase animated bounce infinite" src="src/img/briefcase.svg" />
+              </div>
+            </div>
+          </div>
+
+          <div class="box f">
+            <div class="prize-value">
+              <div class="covering-image">
+                <img class="shadow briefcase animated bounce infinite" src="src/img/briefcase.svg" />
+              </div>
+            </div>
+          </div>
+
         </div>
-      </div>
-    </div>
-
-    <div class="box b">
-      <div class="prize-value">
-        <div class="covering-image">
-          <img class="shadow briefcase animated bounce infinite" src="src/img/briefcase.svg" />
         </div>
-      </div>
+
+    </div>
+        <img class="cg-close-button"src="src/img/closeButton.svg" alt="">
     </div>
 
-    <div class="box c">
-      <div class="prize-value">
-        <div class="covering-image">
-          <img class="shadow briefcase animated bounce infinite" src="src/img/briefcase.svg" />
-        </div>
-      </div>
-    </div>
-
-    <div class="box d">
-      <div class="prize-value">
-        <div class="covering-image">
-          <img class="shadow briefcase animated bounce infinite" src="src/img/briefcase.svg" />
-        </div>
-      </div>
-    </div>
-
-    <div class="box e">
-      <div class="prize-value">
-        <div class="covering-image">
-          <img class="shadow briefcase animated bounce infinite" src="src/img/briefcase.svg" />
-        </div>
-      </div>
-    </div>
-
-    <div class="box f">
-      <div class="prize-value">
-        <div class="covering-image">
-          <img class="shadow briefcase animated bounce infinite" src="src/img/briefcase.svg" />
-        </div>
-      </div>
-    </div>
-
-    <div class="cg-close-button">
-      <img class="animated" src="src/img/closeButton.svg" alt="">
-    </div>
-    
-  </div>
-  <!-- <script type="text/javascript">
-  $(document).ready(function() {
-
-
-  //console.log( "Page loaded." );
-
-  //email validation
-  function validateEmail(email) {
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(email);
-  }
-
-  function hideTooltip(selector) {
-      setTimeout(function() {
-          $(selector).tooltip('hide');
-      }, 2000);
-  }
-
-  function showTooltip(selector) {
-      $(selector).tooltip('show');
-  }
-
-
-  //fade in
-  $('.signupContainer').animate({opacity: 1}, 500);
-  $('.wheelContainer').animate({opacity: 1}, 500);
-
-  //Initialize email validation tooptip
-  $('#email').tooltip({
-      trigger: 'manual'
-  })
-
-
-  //Spin event
-  $(".spinBtn").click(function(){
-
-      email = $('.email').val();
-
-      if (validateEmail(email) == true) {
-
-          $(".spinTrigger").trigger("click");
-
-              //initialize clipboard
-              var clipboard = new Clipboard('.copy-button');
-
-              //initialize tooltip
-              $('#copy').tooltip({
-                  trigger: 'manual'
-              })
-
-              clipboard.on('success', function(e) {
-                  showTooltip('#copy');
-                  hideTooltip('#copy');
-              });
-      }
-      else {
-          showTooltip('#email');
-          hideTooltip('#email');
-      }
-
-  });
-
-  //Expand for mobile
-  $('.expand').click(function(){
-      $('.outerWrapper').animate({ 'height': '100%'}, 500);
-      $('.expand').hide();
-      $('.bottom-wrapper').hide();
-  });
-
-  //Close click
-  $(".sas-closeBtn").click(function(){
-      parent.postMessage("close","*");
-  });
-  $(".closeWheel").click(function(){
-    console.log('close');
-      parent.postMessage("close","*");
-  });
-
-
-
-});
-  </script> -->
 </body>
 
 </html>
