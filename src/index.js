@@ -10,7 +10,14 @@ $(document).ready(function() {
       return re.test(email);
   }
 
+  $('.open-close-chevron').on('click', function() {
+    $(this).toggleClass('open-close-chevron-flipped');
+    $('.wrapper').toggleClass('hide-game');
+  });
 
+  $('cg-close-button').on('click', function() {
+    $('body').remove();
+  });
 
   $('.covering-image').on('click', function() {
 
