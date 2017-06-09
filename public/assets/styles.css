@@ -1,14 +1,12 @@
-html {
-  height: 99%; }
-
-body {
+html, body {
+  padding: 0;
   margin: 0px;
   height: 100%;
   min-height: 100%;
   width: 100%; }
 
 .wrapper {
-  margin: 2%;
+  width: 85%;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
