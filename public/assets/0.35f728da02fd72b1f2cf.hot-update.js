@@ -1,29 +1,29 @@
-var $ = require('jquery');
-require('index.scss');
-var coupon = require('./app.js');
-require('jquery-validate');
+webpackHotUpdate(0,[
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
 
-$(document).ready(function() {
+"use strict";
 
-  $('.open-close-chevron').on('click', function() {
+
+var $ = __webpack_require__(8);
+__webpack_require__(1);
+var coupon = __webpack_require__(7);
+
+$(document).ready(function () {
+
+  $('.covering-image').addClass('card-shuffle');
+
+  $('.open-close-chevron').on('click', function () {
     $(this).toggleClass('open-close-chevron-flipped');
     $('.wrapper').toggleClass('hide-game');
   });
 
-  $('cg-close-button').on('click', function() {
+  $('cg-close-button').on('click', function () {
     $('body').remove();
   });
 
-$('.validated-button').on('click', function () {
-  $('.covering-image').addClass('card-shuffle');
-})
-
-
-
   // $('.validate-email').on('keyup change', function() {
-  //   var $form = $(this).closest('form'),
-  //       $group = $(this).closest('.input-group'),
-  //       state = false;
+  //   state = false;
   //     if (!$group.data('validate')) {
   //     state = $(this).val() ? true : false;
   //   }else if ($group.data('validate') == "email") {
@@ -37,13 +37,11 @@ $('.validated-button').on('click', function () {
   //   }
   //
   //   if (state) {
-  //     $(this).css('background-color', 'green');
-  //   } else {
-  //     $(this).css('background-color', 'red');
+  //
   //   }
   // })
 
-  $('.covering-image').on('click', function() {
+  $('.covering-image').on('click', function () {
 
     $(this).children().removeClass('infinite').addClass('hinge');
 
@@ -53,10 +51,12 @@ $('.validated-button').on('click', function () {
 
     $(this).parent().append("<div class='prize-text' style='animated fadeIn'> " + discount[0] + "</div>");
 
-    $(this).children().one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+    $(this).children().one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
       alert("Congratulations! You got " + discount[0] + " off your next purchase! \n \n Use code " + discount[1] + " at checkout!");
     });
-
   });
-
 });
+
+/***/ })
+])
+//# sourceMappingURL=0.35f728da02fd72b1f2cf.hot-update.js.map
