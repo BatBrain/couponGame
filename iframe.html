@@ -1,5 +1,23 @@
 <div id="coupon-game" style="    position: fixed; height: 100%; width: 100%; left: 0px; top: 0px; z-index: 31415926;">
   <iframe id="coupon-iframe" src="./index.html" width="100%" height="100%" scrolling="no" style=" position: absolute; border-width: 0px; height: 100%; width: 100%; top: 0px; left: 0px;">
   Coupon Cannot be Rendered on this Page.
+
   </iframe>
+  <script type="text/javascript">
+    function removeIframe() {
+      // $('.coupon-game').remove()
+      console.log('Remove triggered')
+    };
+
+    var insideEvent = window.addEventListener ? "addEventListener" : "attachEvent";
+    var insideIframe = window[eventMethod];
+    var messageEvent = insideEvent == "attachEvent" ? "onmessage" : "message";
+
+    insideIframe(messageEvent, function(e) {
+      if (e.data === "close_iframe") {
+        removeIframe()
+      }
+    }, false);
+    
+  </script>
 </div>
