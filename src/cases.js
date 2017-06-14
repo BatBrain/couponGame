@@ -2,24 +2,17 @@ var $ = require('jquery');
 require('index.scss');
 var coupon = require('app.js');
 
-var caseHTML = require('casesHTML.js');
-
-
-//console.log(config)
-
 //Staggered Briefcase Animation**
-function animateCases() {
+function animateCases(onoff) {
   var activate = function() {
     $(".briefcase").addClass('bounce infinite');
   }
-    // $('.briefcase').each(function(n) {
-    //   setTimeout(activate, 2500)
-    // });
+    $('.briefcase').each(function(n) {
+      setTimeout(activate, 2500)
+    });
 }
 
 $(document).ready(function() {
-
-$('#game-area').append(caseHTML)
 
 
 //Emits close event
