@@ -3,21 +3,20 @@
   Coupon Cannot be Rendered on this Page.
 
   </iframe>
-  <!-- <script type="text/javascript">
-    function removeIframe() {
-      // $('.coupon-game').remove()
-      console.log('Remove triggered')
-    };
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  function removeIframe() {
+    // $('.coupon-game').remove()
+    console.log('Remove triggered')
+  };
 
-    var insideEvent = window.addEventListener ? "addEventListener" : "attachEvent";
-    var insideIframe = window[eventMethod];
-    var messageEvent = insideEvent == "attachEvent" ? "onmessage" : "message";
-
-    insideIframe(messageEvent, function(e) {
-      if (e.data === "close_iframe") {
-        removeIframe()
-      }
-    }, false);
-
-  </script> -->
+  window.addEventListener('message', function(e) {
+    if (e.data === "close-message") {
+      $('#coupon-game').remove();
+    }
+  })
+  </script>
 </div>
