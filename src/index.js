@@ -1,18 +1,28 @@
 var $ = require('jquery');
 require('index.scss');
-var coupon = require('./app.js');
+var coupon = require('app.js');
+
+//Staggered Briefcase Animation**
+function animateCases(onoff) {
+  var activate = function() {
+    $(".briefcase").addClass('bounce infinite');
+  }
+    $('.briefcase').each(function(n) {
+      setTimeout(activate, 2500)
+    });
+}
 
 $(document).ready(function() {
 
+
+//Chevron animation and collapse of iframe
   $('.open-close-chevron').on('click', function() {
     $(this).toggleClass('open-close-chevron-flipped');
     $('.wrapper').toggleClass('hide-game');
   });
 
-  $('cg-close-button').on('click', function() {
-    $('body').remove();
-  });
 
+//Email form Val and fade-out of info-wall
   $('.form-control').on('keyup change', function() {
     var $form = $(this).closest('form'),
         $group = $(this).closest('.input-group'),
@@ -29,11 +39,14 @@ $(document).ready(function() {
       state = !isNaN(parseFloat($(this).val())) && isFinite($(this).val());
     }
 
+//What to do on form submit
     if (state) {
       $('.validated-button').css('background-color', 'rgba(2, 224, 2, 0.97)');
-      $('.validated-button').on('click', function () {
+      $('.input-group').on('submit', function(e) {
+        e.preventDefault();
         $('.landing-cover').css('opacity', '0');
         $('.covering-image').addClass('card-shuffle');
+        animateCases(true)
       })
     } else {
       $('.validated-button').css('background-color', 'red');
@@ -41,6 +54,7 @@ $(document).ready(function() {
     }
   })
 
+//Winning Prize Code:
   $('.covering-image').on('click', function() {
 
     $(this).children().removeClass('infinite').addClass('hinge');
@@ -56,5 +70,9 @@ $(document).ready(function() {
     });
 
   });
+
+
+
+
 
 });
