@@ -1,7 +1,6 @@
 var $ = require('jquery');
 require('index.scss');
 var coupon = require('./app.js');
-require('jquery-validate');
 
 $(document).ready(function() {
 
@@ -14,34 +13,33 @@ $(document).ready(function() {
     $('body').remove();
   });
 
-$('.validated-button').on('click', function () {
-  $('.covering-image').addClass('card-shuffle');
-})
+  $('.form-control').on('keyup change', function() {
+    var $form = $(this).closest('form'),
+        $group = $(this).closest('.input-group'),
+        state = false;
+      if (!$group.data('validate')) {
+      state = $(this).val() ? true : false;
+    }else if ($group.data('validate') == "email") {
+      state = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test($(this).val())
+    }else if($group.data('validate') == 'phone') {
+      state = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/.test($(this).val())
+    }else if ($group.data('validate') == "length") {
+      state = $(this).val().length >= $group.data('length') ? true : false;
+    }else if ($group.data('validate') == "number") {
+      state = !isNaN(parseFloat($(this).val())) && isFinite($(this).val());
+    }
 
-
-
-  // $('.validate-email').on('keyup change', function() {
-  //   var $form = $(this).closest('form'),
-  //       $group = $(this).closest('.input-group'),
-  //       state = false;
-  //     if (!$group.data('validate')) {
-  //     state = $(this).val() ? true : false;
-  //   }else if ($group.data('validate') == "email") {
-  //     state = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test($(this).val())
-  //   }else if($group.data('validate') == 'phone') {
-  //     state = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/.test($(this).val())
-  //   }else if ($group.data('validate') == "length") {
-  //     state = $(this).val().length >= $group.data('length') ? true : false;
-  //   }else if ($group.data('validate') == "number") {
-  //     state = !isNaN(parseFloat($(this).val())) && isFinite($(this).val());
-  //   }
-  //
-  //   if (state) {
-  //     $(this).css('background-color', 'green');
-  //   } else {
-  //     $(this).css('background-color', 'red');
-  //   }
-  // })
+    if (state) {
+      $('.validated-button').css('background-color', 'rgba(2, 224, 2, 0.97)');
+      $('.validated-button').on('click', function () {
+        $('.landing-cover').css('opacity', '0');
+        $('.covering-image').addClass('card-shuffle');
+      })
+    } else {
+      $('.validated-button').css('background-color', 'red');
+      $('.validated-button').off('click');
+    }
+  })
 
   $('.covering-image').on('click', function() {
 
