@@ -9,18 +9,15 @@
   crossorigin="anonymous"></script>
   <script type="text/javascript">
   function removeIframe() {
-    // $('.coupon-game').remove()
     console.log('Remove triggered')
   };
 
+// Catch close event and close Iframe
   window.addEventListener('message', function(e) {
     if (e.data === "close-message") {
       $('#coupon-game').remove();
     }
   })
 
-  var config = {
-    game: 'cases'
-  };
   </script>
 </div>

@@ -4,12 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>Pick-a-Case!</title>
-
-
-  </script>
-  <script src="./public/assets/bundle.js"></script>
+  <script src="./public/assets/bundle.js" defer></script>
   <link rel="stylesheet" type="text/css" href="public/assets/styles.css" />
   <link rel="stylesheet" type="text/css" href="src/styles/animate.css" />
+  <!-- <script type="text/javascript" src="src/scratch.js"></script> -->
 
 </head>
 
@@ -20,7 +18,7 @@
         <div class="info-container">
           <div class="title-wrapper">
             <h1>Win a prize!</h1>
-            <p>Enter your email and scratch the image to recieve your prize code!</p>
+            <p>Enter your email and pick a briefcase to recieve your prize code!</p>
           </div>
           <div class="email-wrapper">
             <div class="form-group">
@@ -35,27 +33,27 @@
       </div>
     </div> -->
     <div class="inner-wrapper">
-      <div class="game-area">
+      <div class="game-area" id="game-area">
         <div class="container" id="js-container">
-          <canvas class="canvas" id="js-canvas" width="300" height="300"></canvas>
-          <form class="form" style="visibility: hidden;">
-            <h2>'Allo, 'Allo!</h2>
-            <h3>The secret code is:</h3>
-            <h1><code>HlkafSYc</code></h1>
-            <div>
-              <input type="text" name="code" placeholder="Secret Code">
-            </div>
-            <br>
-            <div>
-              <input type="submit" value="Submit">
-            </div>
-          </form>
-        </div>
+        <canvas class="canvas" id="js-canvas" width="300" height="300"></canvas>
+        <form class="form" style="visibility: hidden;">
+          <h2>'Allo, 'Allo!</h2>
+          <h3>The secret code is:</h3>
+          <h1><code>HlkafSYc</code></h1>
+          <div>
+            <input type="text" name="code" placeholder="Secret Code">
+          </div>
+          <br>
+          <div>
+            <input type="submit" value="Submit">
+          </div>
+        </form>
       </div>
+        </div>
     </div>
-    <img class="cg-close-button" src="src/img/closeButton.svg" alt="">
-    <img class="open-close-chevron" src="src/img/Chevron.svg" alt="">
-  </div>
+        <img class="cg-close-button"src="src/img/closeButton.svg" alt="">
+        <img class="open-close-chevron" src="src/img/Chevron.svg" alt="">
+    </div>
 
 </body>
 

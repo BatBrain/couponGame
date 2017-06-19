@@ -5,6 +5,10 @@
 * Author: Sol Ferguson
 * Author URI: github.com/BatBrain
 */
+//Exit if accessed directly
+if (! defined( 'ABSPATH') ) {
+	exit;
+}
 function themeslug_enqueue_style() {
 	wp_enqueue_style( 'coup_plug_css', plugin_dir_url(__FILE__) . 'styles.css');
 };

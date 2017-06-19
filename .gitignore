@@ -132,5 +132,7 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+*.hot-update.json
+
 
 # End of https://www.gitignore.io/api/node,sass,macos,windows,wordpress
