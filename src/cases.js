@@ -1,6 +1,9 @@
-var gameMaker = function(){
 var $ = require('jquery');
 
+
+var gameMaker = function(couponChoices){
+
+var coupon = couponChoices;
 //Staggered Briefcase Animation**
 function animateCases() {
   var activate = function() {
@@ -13,7 +16,57 @@ function animateCases() {
 
   $(document).ready(function() {
 
-    // $('#game-area').append(gamePicker(config))
+    $('#game-area').append(`<div class="grid">
+
+      <div class="box">
+        <div class="prize-value">
+          <div class="covering-image a">
+            <img class="briefcase animated" src="src/img/briefcase_metal.svg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="prize-value">
+          <div class="covering-image b">
+            <img class="briefcase animated" src="src/img/briefcase_metal.svg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="prize-value">
+          <div class="covering-image c">
+            <img class="briefcase animated" src="src/img/briefcase_metal.svg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="prize-value">
+          <div class="covering-image d">
+            <img class="briefcase animated" src="src/img/briefcase_metal.svg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="prize-value">
+          <div class="covering-image e">
+            <img class="briefcase animated" src="src/img/briefcase_metal.svg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="prize-value">
+          <div class="covering-image f">
+            <img class="briefcase animated" src="src/img/briefcase_metal.svg" />
+          </div>
+        </div>
+      </div>
+
+    </div>`)
 
 
     //Emits close event
@@ -77,6 +130,8 @@ function animateCases() {
       });
 
     });
+
+
 
 
   });
