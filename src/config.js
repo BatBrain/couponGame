@@ -1,5 +1,5 @@
 var config = {
-  game: 'case'
+  game: 'scratch'
 };
 
 module.exports = config;

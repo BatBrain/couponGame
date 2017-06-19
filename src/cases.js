@@ -69,17 +69,6 @@ function animateCases() {
     </div>`)
 
 
-    //Emits close event
-    $('.cg-close-button').on('click', function() {
-      parent.postMessage('close-message', "*")
-    })
-
-
-    //Chevron animation and collapse of iframe
-    $('.open-close-chevron').on('click', function() {
-      $(this).toggleClass('open-close-chevron-flipped');
-      $('.wrapper').toggleClass('hide-game');
-    });
 
 
     //Form Validation Logic
