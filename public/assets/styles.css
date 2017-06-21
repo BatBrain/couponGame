@@ -1,15 +1,13 @@
-.container {
-  vertical-align: middle !important;
-  display: none;
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none; }
+#under-scratch {
+  display: table;
+  height: 100%;
+  width: 100%; }
+
+.under-image {
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle; }
 
 .canvas {
   position: absolute;

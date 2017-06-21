@@ -5,16 +5,16 @@ var coupon = require('app.js');
 $(document).ready(function() {
   (function() {
 
-    $('#game-area').append(`
-    <div id='under-scratch' style="background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-    background-image: url('src/img/scratch-card.svg');">
-    <div class="container" id="js-container">
-      
-    </div>
-    </div>`)
+    // $('#game-area').append(`
+    // <div id='under-scratch' style="background-size: cover;
+    // background-repeat: no-repeat;
+    // height: 100%;
+    // width: 100%;
+    // background-image: url('src/img/scratch-card.svg');">
+    // <div class="container" id="js-container">
+    //   <canvas class="canvas" id="js-canvas" width="300" height="300"></canvas>
+    // </div>
+    // </div>`)
 
     //Form Validation Logic
     $('.form-control').on('keyup change', function() {
@@ -38,7 +38,7 @@ $(document).ready(function() {
         $('.validated-button').css('background-color', 'rgba(2, 224, 2, 0.97)');
         $('.input-group').on('submit', function(e) {
           e.preventDefault();
-          $('.landing-cover').css('opacity', '0');
+          $('.landing-cover').remove();
           $('.container').css('display', 'block');
         })
       } else {

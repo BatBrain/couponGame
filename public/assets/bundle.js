@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "6e49bc67f072e242bf86"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "60586c868aae9b0881fb"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -11148,10 +11148,19 @@ var coupon = __webpack_require__(2);
 $(document).ready(function () {
   (function () {
 
-    $('#game-area').append('\n    <div id=\'under-scratch\' style="background-size: cover;\n    background-repeat: no-repeat;\n    height: 100%;\n    width: 100%;\n    background-image: url(\'src/img/scratch-card.svg\');">\n    <div class="container" id="js-container">\n      \n    </div>\n    </div>'
+    // $('#game-area').append(`
+    // <div id='under-scratch' style="background-size: cover;
+    // background-repeat: no-repeat;
+    // height: 100%;
+    // width: 100%;
+    // background-image: url('src/img/scratch-card.svg');">
+    // <div class="container" id="js-container">
+    //   <canvas class="canvas" id="js-canvas" width="300" height="300"></canvas>
+    // </div>
+    // </div>`)
 
     //Form Validation Logic
-    );$('.form-control').on('keyup change', function () {
+    $('.form-control').on('keyup change', function () {
       var $form = $(this).closest('form'),
           $group = $(this).closest('.input-group'),
           state = false;
@@ -11172,7 +11181,7 @@ $(document).ready(function () {
         $('.validated-button').css('background-color', 'rgba(2, 224, 2, 0.97)');
         $('.input-group').on('submit', function (e) {
           e.preventDefault();
-          $('.landing-cover').css('opacity', '0');
+          $('.landing-cover').remove();
           $('.container').css('display', 'block');
         });
       } else {
