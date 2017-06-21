@@ -1,14 +1,3 @@
-#under-scratch {
-  display: table;
-  height: 100%;
-  width: 100%; }
-
-.under-image {
-  display: table-cell;
-  height: 100%;
-  width: 100%;
-  vertical-align: middle; }
-
 .canvas {
   position: absolute;
   top: 0; }

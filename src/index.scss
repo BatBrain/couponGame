@@ -14,17 +14,10 @@
 
 $sizemax: (height: 100%, width: 100%);
 
-#under-scratch {
-  display: table;
-    height: 100%;
-    width: 100%;
+#js-container {
 }
 
 .under-image {
-  display: table-cell;
-  height: 100%;
-  width: 100%;
-  vertical-align: middle;
 }
 
 .canvas {
