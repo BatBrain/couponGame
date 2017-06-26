@@ -10,16 +10,18 @@ $(document).ready(function() {
     var wrapperHeight = $('#js-wrapper').height;
     var topMargin = (wrapperHeight - wrapperWidth) / 2
     $('#js-conainer').css(`margin-top: ${topMargin}`);
-    // $('#game-area').append(`
-    // <div id='under-scratch' style="background-size: cover;
-    // background-repeat: no-repeat;
-    // height: 100%;
-    // width: 100%;
-    // background-image: url('src/img/scratch-card.svg');">
-    // <div class="container" id="js-container">
-    //   <canvas class="canvas" id="js-canvas" width="300" height="300"></canvas>
-    // </div>
-    // </div>`)
+    $('#game-area').append(`
+      <div id='under-scratch'>
+        <div class="under-image">
+          <img src="src/img/scratch-card.svg" alt="">
+          <div id="js-wrapper">
+            <div id="js-container">
+              <canvas class="canvas" id="js-canvas" ></canvas>
+              <img id='win-lose-img' src='src/img/you-win.svg' />
+            </div>
+          </div>
+        </div>
+      </div>`)
 
     //Form Validation Logic
     $('.form-control').on('keyup change', function() {

@@ -11,178 +11,187 @@
 //   -o-user-select: none;
 //   user-select: none;
 // }
-
-$sizemax: (height: 100%, width: 100%);
-
-.under-image {
-//position: relative;
+@media (min-width: 320px) {
+  .info-container {
+    font-size: 2em;
+    margin: 10%;
+  }
+  #validate-email {
+    font-size: 1em;
+    padding: 10px 12px;
+  }
+  .validated-button {
+    padding: 10px 12px;
+  }
 }
 
-.container {
+
+@media (min-width: 768px) {
+  .under-image {
+    //position: relative;
+  }
+
+  .container {
     //display: block;
     position: absolute;
     top: 50%;
     transform: translate(-50%,-50%);
     left: 50%;
-}
+  }
 
-#under-scratch {
-position: relative;
-}
+  #under-scratch {
+    position: relative;
+  }
 
-#js-wrapper {
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding-right: 1%;
-}
+  #js-wrapper {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 1%;
+  }
 
-#js-container {
-  position: relative;
-  width: 100%;
-  // height: 90%;
-  // vertical-align: middle;
-  margin-top: 10%;
-}
+  #js-container {
+    position: relative;
+    width: 100%;
+    // height: 90%;
+    // vertical-align: middle;
+    margin-top: 10%;
+  }
 
-#js-canvas {
-  position: absolute;
-}
+  #js-canvas {
+    position: absolute;
+  }
 
-.form {
-  padding: 20px;
-}
-
-
-////
-body,
-html {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-  min-height: 100%;
-  width: 100%;
-}
-
-.wrapper {
-  transition-duration: 1s;
-  background-color: #9fc6e8;
-  width: 60%;
-  min-width: 800px;
-  height: 100%;
-  overflow: visible;
-  position: relative;
-  display: table;
-  position: absolute;
-  box-shadow: 1px 2px 6px 2px rgba(0,0,0,0.5);
-  // background-color: #fff;
-  // color: #444;
-  // margin: 0 15% 0 15%;
-}
-
-.landing-cover {
-  background: rgba(0,0,0,.7);
-  -webkit-transition: opacity .5s ease-in-out;
-  -moz-transition: opacity .5s ease-in-out;
-  -o-transition: opacity .5s ease-in-out;
-  transition: opacity .5s ease-in-out;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: table;
-}
-
-.landing-overlay {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.info-container {
-  margin: 20%;
-  background: lightsteelblue;
-  border-radius: 10px;
-  padding: 5px;
-  border: 3px solid grey;
-}
-
-.inner-wrapper {
-  width: 100%;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.game-area {
-  margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  height: 60%;
-  z-index: 1;
-  margin-bottom: 5%;
-}
-
-.grid {
-  display: inline-grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  height: 100%;
-  width: 100%;
-}
-
-.box {
-  margin: 1%;
-  background-color: rgba(2, 2, 2, 0.2);
-  // color: #1C1B1B;
-  border-radius: 5px;
-  font-size: 150%;
-}
-
-.briefcase {
-  margin: 8%;
-  height: 84%;
-  width: 84%;
-}
-
-.title-wrapper {
-  margin: auto;
-  height: 20%;
-  text-align: -webkit-center;
-}
+  .form {
+    padding: 20px;
+  }
 
 
-.email-wrapper {
-  margin: auto;
-  text-align: -webkit-center;
-}
+  ////
+  body,
+  html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+  }
 
-.form-control {
-  width: 40%;
-  border: 1px solid #ccc;
-  height: 34px;
-  border-radius: 4px;
-  padding: 0px 12px;
-}
+  .wrapper {
+    transition-duration: 1s;
+    background-color: #9fc6e8;
+    width: 60%;
+    min-width: 800px;
+    height: 100%;
+    overflow: visible;
+    position: relative;
+    display: table;
+    position: absolute;
+    box-shadow: 1px 2px 6px 2px rgba(0,0,0,0.5);
+  }
 
-.validated-button {
-  border: 1px solid #ccc;
-  height: 34px;
-  border-radius: 4px;
-  padding: 0px 12px;
-}
+  .landing-cover {
+    background: rgba(0,0,0,.7);
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: table;
+  }
 
-.prize-value {
+  .landing-overlay {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .info-container {
+    margin: 20%;
+    background: lightsteelblue;
+    border-radius: 10px;
+    padding: 5px;
+    border: 3px solid grey;
+  }
+
+  .inner-wrapper {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .game-area {
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    height: 60%;
+    z-index: 1;
+    margin-bottom: 5%;
+  }
+
+  .grid {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    width: 100%;
+  }
+
+  .box {
+    margin: 1%;
+    background-color: rgba(2, 2, 2, 0.2);
+    border-radius: 5px;
+    font-size: 150%;
+  }
+
+  .briefcase {
+    margin: 8%;
+    height: 84%;
+    width: 84%;
+  }
+
+  .title-wrapper {
+    margin: auto;
+    height: 20%;
+    text-align: -webkit-center;
+  }
+
+
+  .email-wrapper {
+    margin: auto;
+    text-align: -webkit-center;
+  }
+
+  .form-control {
+    width: 40%;
+    border: 1px solid #ccc;
+    height: 34px;
+    border-radius: 4px;
+    padding: 0px 12px;
+  }
+
+  .validated-button {
+    border: 1px solid #ccc;
+    height: 34px;
+    border-radius: 4px;
+    padding: 0px 12px;
+  }
+
+  .prize-value {
 
 
 
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-/*.prize-value > div {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  /*.prize-value > div {
   border: 1px solid red;
 }*/
 .prize-text {
@@ -193,13 +202,9 @@ html {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   -webkit-animation: fadein 5s;
-  /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 5s;
-  /* Firefox < 16 */
   -ms-animation: fadein 5s;
-  /* Internet Explorer */
   -o-animation: fadein 5s;
-  /* Opera < 12.1 */
   animation: fadein 5s;
 }
 
@@ -343,4 +348,6 @@ html {
   to {
     opacity: 1;
   }
+}
+
 }
