@@ -1,0 +1,1 @@
+{"version":3,"file":"0.29c3dcc8e74c48c6902f.hot-update.js","sources":["webpack:///src/config.js?9d9a"],"sourcesContent":["var config = {\n  game: 'scratch'\n  // game: 'case'\n};\n\nmodule.exports = config;\n\n\n\n// WEBPACK FOOTER //\n// src/config.js"],"mappings":";;;;;;;;AAAA;AACA;AACA;AAFA;AACA;AAIA;;;;A","sourceRoot":""}

@@ -16,6 +16,8 @@ function animateCases() {
 
   $(document).ready(function() {
 
+    $('.wrapper').append('<div class="cases-banner"><h1>Choose a Case (banner here)</h1></div>')
+
     $('#game-area').append(`<div class="grid">
 
       <div class="box">
